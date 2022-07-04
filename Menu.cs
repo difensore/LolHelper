@@ -36,6 +36,7 @@ namespace LolHelper
             }
             if (ServerConnection == false)
                 Start();
+            Console.WriteLine("Great, you enter correct server name :)");
         }
         public static void EnterName()
         {

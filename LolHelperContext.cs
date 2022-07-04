@@ -8,6 +8,7 @@ namespace LolHelper
 {
     public partial class LolHelperContext : DbContext
     {
+        public static string ServerName { get; set; }
         public LolHelperContext()
         {
         }
@@ -31,7 +32,7 @@ namespace LolHelper
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=DESKTOP-SHI92TP\\SQLEXPRESS;Database=LolHelper;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer($"Server={ServerName};Database=LolHelper;Trusted_Connection=True;");
             }
         }
 

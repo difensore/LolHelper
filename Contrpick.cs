@@ -42,7 +42,7 @@ namespace LolHelper
         }
         public static void AsyncBuildContr()
         {
-            CreateContr cc = new CreateContr(new ChampAbility(), id);
+            CreateContr cc = new CreateContr(new ChampPrint(), id);
             Task champ = cc.AsyncPrint();
             cc.printer = new SpellPrint();
             Task spells = cc.AsyncPrint();

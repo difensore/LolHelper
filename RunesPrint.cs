@@ -69,7 +69,7 @@ namespace LolHelper
                     TR = ThirdRune;
                     FoR = FourthRune;
                     FRS = FirstRuneS;
-                    SRS = FirstRuneS;
+                    SRS = SecondRuneS;
                     SE = SecondRuneS;
                     FE = FirstExtra;
                     SE = SecondExtra;

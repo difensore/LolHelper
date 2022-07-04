@@ -6,8 +6,10 @@ namespace LolHelper
     class Program
     {
         static void Main(string[] args)
-        {  
-            Menu.Start();
+        {
+            Console.WriteLine("Welcome to LolHelper!");
+
+           Menu.Start();
             Menu.EnterName();
         }
     }

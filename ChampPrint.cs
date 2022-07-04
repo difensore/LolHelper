@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LolHelper
 {
-  class ChampAbility:IPrint
+  class ChampPrint:IPrint
     {
         public async Task Asyncprint(int id)
         {

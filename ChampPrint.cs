@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,13 +13,13 @@ namespace LolHelper
         {
            await using (LolHelperContext db = new LolHelperContext())
             {
-                var champ = from Champ in db.Champs
+                var champ =await (from Champ in db.Champs
                             join Pick in db.Picks on Champ.Id equals Pick.Champ
                         where Pick.Id == id
-                        select Champ;
+                        select Champ.Name).ToListAsync();
                 foreach(var ch in champ )
                 {               
-                    Console.WriteLine($"\nYou should pick {ch.Name}");
+                    Console.WriteLine($"\nYou should pick {ch}");
                 }
             }
         }

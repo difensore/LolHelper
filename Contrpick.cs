@@ -40,7 +40,7 @@ namespace LolHelper
                 }
             }
         }
-        public static void AsyncBuildContr()
+        public static async void AsyncBuildContr()
         {
             CreateContr cc = new CreateContr(new ChampPrint(), id);
             Task champ = cc.AsyncPrint();
@@ -50,7 +50,7 @@ namespace LolHelper
             Task items = cc.AsyncPrint();
             cc.printer = new RunesPrint();
             Task runes = cc.AsyncPrint();
-            Task.WaitAll(champ, spells, items, runes);
+            await Task.WhenAll(champ, spells, items, runes);
             Menu.EnterName();
             Console.ReadLine();
         }

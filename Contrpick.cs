@@ -52,7 +52,6 @@ namespace LolHelper
             Task runes = cc.AsyncPrint();
             await Task.WhenAll(champ, spells, items, runes);
             Menu.EnterName();
-            Console.ReadLine();
         }
     }
 }
